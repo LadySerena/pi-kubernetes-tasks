@@ -4,13 +4,13 @@ require "google/cloud/storage"
 require_relative "../lib/host"
 
 namespace :image do
-  desc "generate ssh host keys HOST="
+  desc "generate ssh host keys HOSTS="
   task :hostkeys do
     host = Hosts.from_env
     create_keys(host)
   end
 
-  desc "upload host keys to gcp (cloud storage for pub keys and secret manager for private keys) HOST="
+  desc "upload host keys to gcp (cloud storage for pub keys and secret manager for private keys) HOSTS="
   task :upload_keys do
     host = Hosts.from_env
     upload_to_gcp(host)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Hosts
-  @host_list = ["melchior", "balthasar", "casper"]
+  @host_list = ["melchior", "balthasar", "casper", "dns"]
 
   class << self
     def from_env
